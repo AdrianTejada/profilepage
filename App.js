@@ -2,7 +2,7 @@ import { StatusBar } from 'expo-status-bar';
 import React, {useEffect} from 'react';
 import { StyleSheet, Text, View } from 'react-native';
 import { Camera } from 'expo-camera';
-//import { TextTag } from './comps/text'
+import TextTag from './comps/text'
 
 
 export default function App() {
@@ -45,7 +45,9 @@ export default function App() {
         <View style={divider.container}></View>
 
         <Text style={normaltext.container}>Settings and privacy</Text>
-          <Text style={normaltext.container}>Help Center</Text>  
+        <Text style={normaltext.container}>Help Center</Text> 
+
+        <TextTag/>
 
 
 

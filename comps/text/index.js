@@ -1,20 +1,19 @@
 import React from 'react';
 import { StyleSheet, Text, View } from 'react-native';
-import { styled } from 'styled-components';
+import styled from 'styled-components/native';
 
-const TextCont = styled.View`
+const TextCont = styled.Text`
     color: ${props=>props.color};
-    font-weight: ${props=>props.fontweight};
-    font-size: ${props=>props.fontsize};
-    margin: ${props=>props.margin};
+    font-size: ${props=>props.fontsize}px;
+    margin: ${props=>props.margin}px;
 `;
 
-export default function TextTag(
+export default function TextTag({
     text="default text",
-    color={color},
-    fontweight={fontweight},
-    fontsize={fontsize},
-    margin={margin}
+    color="white",
+    fontsize=40,
+    margin=5
+}
 ){
-    return <TextCont>{text}</TextCont>
+    return <TextCont color={color} fontsize={fontsize} margin={margin}>{text}</TextCont>
 }
