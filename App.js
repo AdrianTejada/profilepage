@@ -18,7 +18,36 @@ export default function App() {
           <Camera style={{width:60, height:60,}} type={Camera.Constants.Type.front}/>
         </View>
 
-        <Text>yes</Text>
+        <Text style={boldtext.container}>Adrian</Text>
+        <Text style={smalltext.container}>@adriantejada</Text>
+
+        <View style={followcount.container}>
+          <View style={followcount.container}>
+            <Text style={boldtext.container}>20</Text>
+            <Text style={smalltext.container}>Following</Text>
+          </View>
+
+          <View style={followcount.container}>
+            <Text style={boldtext.container}>20</Text>
+            <Text style={smalltext.container}>Followers</Text>
+          </View>
+        </View>
+
+        <View>
+          <Text style={normaltext.container}>Profile</Text>
+          <Text style={normaltext.container}>Lists</Text>
+          <Text style={normaltext.container}>Topics</Text>
+          <Text style={normaltext.container}>Bookmarks</Text>
+          <Text style={normaltext.container}>Moments</Text>
+          <Text style={normaltext.container}>Purchase</Text>
+          <Text style={normaltext.container}>Monetization</Text>     
+          <Text style={normaltext.container}>Twitter Blue</Text>     
+        </View>
+
+        <View style={divider.container}></View>
+
+        <Text style={normaltext.container}>Settings and privacy</Text>
+        <Text style={normaltext.container}>Help Center</Text> 
 
         <StatusBar style="auto" />
       </View>
