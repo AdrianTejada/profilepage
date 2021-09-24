@@ -1,8 +1,8 @@
 import { StatusBar } from 'expo-status-bar';
 import React, {useEffect} from 'react';
-import { StyleSheet, View } from 'react-native';
+import { StyleSheet } from 'react-native';
 import { Camera } from 'expo-camera';
-import { Text, ApplicationProvider, Divider } from '@ui-kitten/components';
+import { Text, ApplicationProvider, Divider, Layout } from '@ui-kitten/components';
 import * as eva from '@eva-design/eva';
 
 
@@ -13,27 +13,27 @@ export default function App() {
 
   return (
     <ApplicationProvider {...eva} theme={eva.dark}>
-      <View style={styles.container}>
-        <View style={{borderRadius:50,paddingBottom: 18}}>
+      <Layout style={styles.container}>
+        <Layout style={{borderRadius:50,paddingBottom: 18}}>
           <Camera style={{width:60, height:60,}} type={Camera.Constants.Type.front}/>
-        </View>
+        </Layout>
 
         <Text style={boldtext.container}>Adrian</Text>
         <Text style={smalltext.container} appearance="hint">@adriantejada</Text>
 
-        <View style={followcount.container}>
-          <View style={followcount.container}>
+        <Layout style={followcount.container}>
+          <Layout style={followcount.container}>
             <Text style={boldtext.container}>20</Text>
             <Text style={smalltext.container} appearance="hint">Following</Text>
-          </View>
+          </Layout>
 
-          <View style={followcount.container}>
+          <Layout style={followcount.container}>
             <Text style={boldtext.container}>20</Text>
             <Text style={smalltext.container} appearance="hint">Followers</Text>
-          </View>
-        </View>
+          </Layout>
+        </Layout>
 
-        <View>
+        <Layout>
           <Text style={normaltext.container}>Profile</Text>
           <Text style={normaltext.container}>Lists</Text>
           <Text style={normaltext.container}>Topics</Text>
@@ -42,7 +42,7 @@ export default function App() {
           <Text style={normaltext.container}>Purchase</Text>
           <Text style={normaltext.container}>Monetization</Text>     
           <Text style={normaltext.container}>Twitter Blue</Text>     
-        </View>
+        </Layout>
 
         <Divider style={divider.container}/>
 
@@ -50,7 +50,7 @@ export default function App() {
         <Text style={normaltext.container}>Help Center</Text> 
 
         <StatusBar style="auto" />
-      </View>
+      </Layout>
     </ApplicationProvider>
   );
 }
@@ -59,7 +59,6 @@ const styles = StyleSheet.create({
   container: {
     flex: 1,
     flexDirection: 'column',
-    backgroundColor: '#000112',
     alignItems: 'flex-start',
     justifyContent: 'flex-start',
     paddingLeft: 30,
